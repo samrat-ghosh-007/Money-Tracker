@@ -8,10 +8,10 @@ router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.get("/me", authMiddleware, getProfile);
 router.get("/:id", authMiddleware, deleteUser);
-router.post("/verify-otp", authMiddleware, verifyOtp);
-router.post("/resend-otp", authMiddleware, resendOtp);
-router.post("/forgot-password", authMiddleware, forgotPassword);
-router.post("/reset-password", authMiddleware, resetPassword);
+router.post("/verify-otp", verifyOtp);
+router.post("/resend-otp", resendOtp);
+router.post("/forgot-password", forgotPassword);
+router.post("/reset-password", resetPassword);
 
 
 export default router;
